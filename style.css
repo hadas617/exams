@@ -1,0 +1,700 @@
+body {
+  font-size: 1.8rem;
+  font-family: sans-serif;
+  background: #ecb3e5;
+  background-image: repeating-linear-gradient(45deg, rgba(#FFF, .1), rgba(#FFF, .1) 30px, transparent 0, transparent 60px);
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-transform: uppercase;
+  opacity: 0.3;
+  font-size: 20vmin;
+  color: #999;
+}
+
+button {
+  border-radius: 30px;
+  background-color: #777;
+  opacity: 0.3;
+  font-size: 70%;
+  color: #efefef;
+  padding: 1rem 3rem;
+  border: none;
+}
+
+button:hover, button:active {
+  opacity: 0.8;
+}
+
+#dadText {
+  position : absolute;
+  height: 60vh;
+  width: 45vw;
+  top: 1vh;
+  left: 28vw;
+}
+
+#birthdayDad {
+  position: absolute;
+  bottom: 0vh;
+  left: 32vw;
+  height: 100vh;
+  width: 35vw;
+}
+
+#exit {
+  position: absolute;
+  top: 5vh;
+  right: 3vw;
+  height: 7vh;
+  width: 4vw;
+  z-index: 100;
+  cursor: pointer;
+}
+
+#exitHover {
+  position: absolute;
+  top: 5vh;
+  right: 3vw;
+  height: 7vh;
+  width: 4vw;
+  z-index: 101;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+#exit:hover + #exitHover,
+#exitHover:hover {
+  opacity: 1;
+}
+
+#momBallom {
+  position: absolute;
+  z-index: 5;
+  right: 0vw;
+  bottom: 0vh;
+  height: 90vh;
+  width: 50vw;
+}
+
+#shmuelBallon {
+  position: absolute;
+  z-index: 5;
+  left: 0vw;
+  bottom: 0vh;
+  height: 100vh;
+  width: 50vw;
+}
+
+#hadasClown {
+  position: absolute;
+  z-index: 5;
+  left: 5vw;
+  bottom: 0vh;
+  height: 80vh;
+  width: 45vw;
+}
+
+#miriamEat {
+  position: absolute;
+  z-index: 5;
+  left: 20vw;
+  bottom: 0vh;
+  height: 80vh;
+  width: 50vw;
+}
+
+#momBallom,
+#shmuelBallon,
+#hadasClown,
+#miriamEat {
+  opacity: 0;
+}
+
+#momBallom {
+  animation-delay: 0s;
+}
+
+#shmuelBallon {
+  animation-delay: 1s;
+}
+
+#hadasClown {
+  animation-delay: 2s;
+}
+
+#miriamEat {
+  animation-delay: 3s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#makingBd {
+  visibility: hidden;
+}
+
+#makingBd.show {
+  visibility: visible;
+}
+
+#dadCake {
+  position: absolute;
+  z-index: 2;
+  left: 20vw;
+  top: 0vh;
+  height: 100vh;
+  width: 60vw;
+}
+
+#desk {
+  position: absolute;
+  z-index: 3;
+  height: 30vh;
+  width: 100vw;
+  bottom: 0vh;
+  left: 0vw;
+}
+
+#spoon {
+  position: absolute;
+  z-index: 4;
+  height: 40vh;
+  width: 15vw;
+  left: 59vh;
+  bottom: 10vw;
+}
+
+#cake {
+  position: absolute;
+  z-index: 5;
+  height: 50vh;
+  width: 40vw;
+  bottom: 10vh;
+  left: 30vw;
+}
+
+#dadBd {
+  display: none;
+}
+
+#balloon-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.balloon {
+  height: 125px;
+  width: 105px;
+  border-radius: 75% 75% 70% 70%;
+  position: relative;
+}
+
+.balloon:before {
+  content: "";
+  height: 75px;
+  width: 1px;
+  padding: 1px;
+  background-color: #FDFD96;
+  display: block;
+  position: absolute;
+  top: 125px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.balloon:after {
+  content: "▲";
+  text-align: center;
+  display: block;
+  position: absolute;
+  color: inherit;
+  top: 120px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-140vh);
+    opacity: 0;
+  }
+}
+
+#arrow {
+  position: absolute;
+  height: 15vh;
+  width: 10vw;
+  left: 3vw;
+  top: 75vh;
+  z-index: 6;
+  cursor: pointer;
+
+  animation: arrowMove 1.5s ease-in-out infinite;
+  transition: transform 0.2s ease;
+}
+
+#arrow:hover {
+  transform: scale(1.2);
+  animation: none;
+}
+
+@keyframes arrowMove {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(15px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+#sea {
+  background-color: rgb(106, 158, 190);
+  display: none;
+}
+
+.sea-container {
+  position: fixed; 
+  bottom: -10vh;                  
+  left: 0;
+  width: 100vw;               
+  height: 35vh;               
+  overflow: hidden;
+  background-color: transparent;
+  z-index: 10;
+}
+
+.wave-container {
+  width: 100%;                
+  height: 100%;               
+  position: relative;
+}
+
+.wave-container img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%; 
+  height: 100%;               
+  object-fit: fill;           
+}
+
+#wave2 {
+  z-index: 1;    
+  height: 100%;               
+  animation: moveWaveTwo 6s linear infinite; 
+}
+
+.boat-container {
+  position: absolute;   
+  position: fixed;
+  z-index: 2;
+  left: 0vw;
+  top: 0vh;
+  height: 110vh;
+  width: 50vw; 
+  pointer-events: none;    
+  pointer-events: none;       
+}
+
+.rocking-boat {
+  width: 100%;
+  height: auto;
+  transform-origin: bottom center; 
+  animation: boatRock 4s ease-in-out infinite; 
+}
+
+#wave1 {
+  z-index: 3;  
+  opacity: 0.9;
+  height: 90%;                
+  animation: moveWaveOne 10s linear infinite;
+}
+
+@keyframes moveWaveOne {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes moveWaveTwo {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes boatRock {
+  0% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-4px) rotate(-5deg); }
+  50% { transform: translateY(0) rotate(0deg); }
+  75% { transform: translateY(-4px) rotate(5deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+.sun-container {
+  position: fixed;
+  height: 30vh;
+  width: 20vw;
+  top: 3vh;
+  left: 1vw;
+  z-index: 1;  
+  pointer-events: none;      
+}
+
+.bouncing-sun {
+  width: 100%;
+  height: auto;
+  animation: sunDoubleHop 3s linear infinite; 
+}
+
+@keyframes sunDoubleHop {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(10px, 20px);
+  }
+  20% {
+    transform: translate(10px, 10px);
+  }
+  32% {
+    transform: translate(10px, 20px);
+  }
+  45% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+  62% {
+    transform: translate(-10px, 20px);
+  }
+  70% {
+    transform: translate(-10px, 10px);
+  }
+  82% {
+    transform: translate(-10px, 20px);
+  }
+  95%, 100% {
+    transform: translate(0, 0);
+  }
+}
+
+.seagull {
+  position: absolute;
+  z-index: 2;
+  height: 17vh;
+  width: 14vw;
+  top: 20vh; 
+  left: -20vw; 
+  animation: flyRight 12s linear infinite;
+}
+
+.seagull.delay-1 {
+  top: 35vh;
+  animation-delay: 4s;
+}
+
+.seagull.delay-2 {
+  top: 15vh; 
+  animation-delay: 6s; 
+  height: 14vh;
+  width: 11vw;
+}
+
+@keyframes flyRight {
+  0% {
+    left: -20vw;
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px); 
+  }
+  100% {
+    left: 110vw; 
+    transform: translateY(0);
+  }
+}
+
+.sea-container {
+  position: fixed; 
+  bottom: -10vh;                   
+  left: 0;
+  width: 100vw;               
+  height: 35vh;               
+  overflow: visible; 
+
+  background-color: transparent;
+  z-index: 10;
+}
+
+
+.jumping-fish {
+  position: absolute;
+  bottom: -12vh; 
+  opacity: 0;
+}
+
+.jumping-fish.between-waves {
+  z-index: 3; 
+  animation: betweenJump 4s ease-in-out infinite; 
+}
+
+.jumping-fish.in-front {
+  z-index: 4; 
+  animation: dolphinJump 4s ease-in-out infinite; 
+}
+
+.jumping-fish.fish-1 {
+  left: 80vw; 
+  height: 9vh;   
+  width: 7vw;
+  animation-delay: 0.5s;
+}
+
+.jumping-fish.fish-2 {
+  left: 50vw;
+  height: 7vh; 
+  width: 5vw;
+  animation-delay: 1.8s;
+}
+
+.jumping-fish.fish-3 {
+  left: 20vw;
+  height: 11vh;  
+  width: 9vw;
+  animation-delay: 2.9s;
+}
+
+@keyframes betweenJump {
+  0% {
+    bottom: -12vh;
+    opacity: 0;
+    transform: translateX(0) rotate(-35deg); 
+  }
+  15% {
+    opacity: 1;
+  }
+  35% {
+    bottom: 38vh; 
+    transform: translateX(-12vw) rotate(0deg); 
+  }
+  55% {
+    bottom: -12vh;
+    transform: translateX(-24vw) rotate(35deg); 
+    opacity: 1;
+  }
+  60%, 100% {
+    bottom: -12vh;
+    opacity: 0;
+    transform: translateX(-24vw) rotate(35deg);
+  }
+}
+
+@keyframes dolphinJump {
+  0% {
+    bottom: -12vh;
+    opacity: 0;
+    transform: translateX(0) rotate(-30deg); 
+  }
+  15% {
+    opacity: 1;
+  }
+  35% {
+    bottom: 14vh; 
+    transform: translateX(-12vw) rotate(0deg); 
+  }
+  55% {
+    bottom: -12vh;
+    transform: translateX(-24vw) rotate(30deg); 
+    opacity: 1;
+  }
+  60%, 100% {
+    bottom: -12vh;
+    opacity: 0;
+    transform: translateX(-24vw) rotate(30deg);
+  }
+}
+
+#endButton {
+  position: absolute;
+  height: 10vh;
+  width: 9vw;
+  top: 5vh;
+  left: 4vw;
+  z-index: 2;
+  cursor: pointer;
+}
+
+#endButtonHover {
+  position: absolute;
+  height: 10vh;
+  width: 9vw;
+  top: 5vh;
+  left: 4vw;
+  z-index: 3;
+  cursor: pointer;
+    opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none; 
+}
+
+#endButton:hover + #endButtonHover {
+  opacity: 1;
+}
+
+#europe {
+  position: absolute;
+  top: 6vh;
+  left: 14vw;
+  height: 40vh;
+  width: 20vw;
+}
+
+#europeText {
+  position: absolute;
+  top: 44vh;
+  left: 21vw;
+  font-size: 5vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+#australia {
+  position: absolute;
+  top: 6vh;
+  left: 42vw;
+  height: 40vh;
+  width: 20vw;
+}
+
+#australiaText {
+  position: absolute;
+  top: 44vh;
+  left: 46vw;
+  font-size: 5vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+#asia {
+  position: absolute;
+  top: 6vh;
+  left: 68vw;
+  height: 40vh;
+  width: 20vw;
+}
+
+#asiaText {
+  position: absolute;
+  top: 44vh;
+  left: 74vw;
+  font-size: 5vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+#africa {
+  position: absolute;
+  top: 51vh;
+  left: 14vw;
+  height: 40vh;
+  width: 20vw;
+}
+
+#africaText {
+  position: absolute;
+  top: 90vh;
+  left: 21vw;
+  font-size: 5vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+#nAmerica {
+  position: absolute;
+  top: 51vh;
+  left: 42vw;
+  height: 42vh;
+  width: 16vw;
+}
+
+#nAmericaText {
+  position: absolute;
+  top: 90vh;
+  left: 46vw;
+  font-size: 5vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+#sAmerica {
+  position: absolute;
+  top: 51vh;
+  left: 68vw;
+  height: 40vh;
+  width: 20vw; 
+}
+
+#sAmericaText {
+  position: absolute;
+  top: 90vh;
+  left: 70vw;
+  font-size: 5vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+.continent {
+  width: 10vw;
+  transition: filter 0.3s ease;
+  cursor: pointer;
+}
+
+.continent:hover {
+  filter:
+    drop-shadow(0 0 10px #ffffff)
+    drop-shadow(0 0 20px #ffffff)
+    drop-shadow(0 0 40px #ffffff)
+    drop-shadow(0 0 80px #ffffff);
+}
+
+#map {
+  display: none;
+  z-index: 10;
+}
