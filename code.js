@@ -2,14 +2,14 @@
 //   map();
 // });
 
-document.addEventListener("click", function (event) {
-  if (event.target.id === "exit" || event.target.id === "exitHover") {
-        window.close();
-    setTimeout(() => {
-      window.location.href = "about:blank"; 
-    }, 100);
-  }
-});
+// document.addEventListener("click", function (event) {
+//   if (event.target.id === "exit" || event.target.id === "exitHover") {
+//         window.close();
+//     setTimeout(() => {
+//       window.location.href = "about:blank"; 
+//     }, 100);
+//   }
+// });
 (() => {
   "use strict";
   const Utils = {
