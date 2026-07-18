@@ -664,9 +664,9 @@ h4 {
     font-size: 3.5vh;
   }
   .card.open {
-    left: 75%;
-    top: 25%;  
-    transform: translate(-50%, -50%) perspective(2000px) rotate(5deg) scale(1.2); /* Slipped scale down a tiny bit to make sure it fits vertical space */
+      left: 75%;
+      top: 55%;  
+      transform: translate(-50%, -50%) perspective(2000px) rotate(5deg) scale(1.2);
   }
   .card.open .bark {
       box-shadow:80px 80px 60px rgba(0,0,0,.25) inset;
