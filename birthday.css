@@ -666,18 +666,16 @@ h4 {
     font-size: 3.5vh;
   }
 
-  /* Fixed the CSS syntax error by moving this out of .card .details h4 */
   .card:hover {
     left: 50%;
-    top: 35%; /* Changed from 1% to 35% so it doesn't vanish entirely on hover */
+    top: 45%; 
     transform: translate(-50%, -50%) perspective(2000px);
     box-shadow: inset 300px 0 50px rgba(0,0,0,.5), 20px 0 60px rgba(0,0,0,.5);
   }
 
-  /* CHANGED: Brought the card significantly up so the bottom stays inside the frame */
   .card.open {
     left: 75%;
-    top: 30%; /* Altered from -3vh to 30% to position its center higher up securely */
+    top: 30%; 
     transform: translate(-50%, -50%) perspective(2000px) rotate(5deg) scale(1.2); /* Slipped scale down a tiny bit to make sure it fits vertical space */
   }
 
