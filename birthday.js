@@ -195,7 +195,7 @@ window.addEventListener("load", () => {
   //   makingbd();
   // }, 3000);
   });
-  // card();
+  card();
 })();
 
 function makingbd() {
