@@ -178,10 +178,10 @@ h1 {
         justify-content: center;
         padding-top: 0;
     }
-
+/* 
     h1 {
         position: relative;
-        /* transform: translateX(-100px); */
+        transform: translateX(-100px);
         top: -100px; 
         font-size: 5.2rem;
         margin-bottom: 80px;
@@ -193,7 +193,7 @@ h1 {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         text-shadow: 0 4px 20px rgba(0,0,0,0.5);
-    }
+    } */
 
     .choices {
         position: relative;
