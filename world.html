@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מדינות</title>
+    <link rel="stylesheet" href="world.css">
+    <script src="world.js" defer></script>
+    <link rel="icon" type="image/x-icon" href='assets/images/worldLogo.png'>
+</head>
+<body>
+    <div id="sea">
+        <div class="sea-container">
+            <div class="wave-container">
+                <img id="wave2" src="assets/images/wave2.png" alt="Back Wave">
+                <img src="assets/images/fish.png" class="jumping-fish fish-1 between-waves" alt="Fish">
+                <img src="assets/images/fish.png" class="jumping-fish fish-3 between-waves" alt="Fish">
+                <div class="boat-container">
+                    <img src="assets/images/boat.png" alt="Rocking Boat" class="rocking-boat">
+                </div>
+                <img id="wave1" src="assets/images/wave1.png" alt="Front Wave">
+                <img src="assets/images/fish.png" class="jumping-fish fish-2 in-front" alt="Fish">
+            </div>
+        </div>
+
+        <div class="sun-container">
+            <img src="assets/images/sun.png" alt="Bouncing Sun" class="bouncing-sun">
+        </div>
+        <img src="assets/images/seagulle.png" class="seagull" alt="Seagull">
+        <img src="assets/images/seagulle.png" class="seagull delay-1" alt="Seagull">
+        <img src="assets/images/seagulle.png" class="seagull delay-2" alt="Seagull">
+        </div>
+    <div id="map">
+        <img id="restart" src="assets/images/restart.png">
+        <div class="continent-wrapper">
+                <img class="continent" id="europe" src="assets/images/continents/europe.png">
+                <header id="europeText">אירופה</header>
+        </div>
+        <div class="continent-wrapper">
+                <img class="continent" id="australia" src="assets/images/continents/australia.png">
+                <header id="australiaText">אוקיאניה</header>
+        </div>
+        <div class="continent-wrapper">
+                <img class="continent" id="asia" src="assets/images/continents/asia.png">
+                <header id="asiaText">אסיה</header>
+        </div>
+        <div class="continent-wrapper">
+                <img class="continent" id="africa" src="assets/images/continents/africa.png">
+                <header id="africaText">אפריקה</header>
+        </div>
+        <div class="continent-wrapper">
+                <img class="continent" id="nAmerica" src="assets/images/continents/nAmerica.png">
+                <header id="nAmericaText">צפון אמריקה</header>
+        </div>
+        <div class="continent-wrapper">
+                <img class="continent" id="sAmerica" src="assets/images/continents/sAmerica.png">
+                <header id="sAmericaText">דרום אמריקה</header>
+        </div>
+    </div>
+    <div id="videoPage" style="display: none;">
+        <img id="videoBg" src="assets/images/videoBg.png">        
+        <iframe id="videoPlayer" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="display: none;"></iframe>        
+        <div id="funFactNote">
+        <h3 class="note-title">הידעת? 💡</h3>
+        <div class="scroll-wrapper">
+            <p id="noteText"></p>
+        </div>
+        </div>
+        <img id="flag" src="assets/images/countries/africa/algeria.webp">
+        <img id="arrow" src="assets/images/arrow.png" alt="Back Arrow">
+    </div>
+    <div id="europeCountries" class="grid-container" style="display: none;">
+        <img id="arrowEurope" src="assets/images/arrow.png">
+        <div class="search-wrapper">
+            <input type="text" id="countrySearch" placeholder="חפש מדינה..." oninput="filterCountries()">
+        </div>
+        <div class="country-card" onclick="video('albania')">
+            <img class="flag-img" src="assets/images/countries/europe/albania.webp" alt="Albania Flag">
+            <div class="country-name">אלבניה</div>
+        </div>
+        <div class="country-card" onclick="video('andorra')">
+            <img class="flag-img" src="assets/images/countries/europe/andorra.webp" alt="andorra Flag">
+            <div class="country-name">אנדורה</div>
+        </div>
+        <div class="country-card" onclick="video('armenia')">
+            <img class="flag-img" src="assets/images/countries/europe/armenia.webp" alt="armenia Flag">
+            <div class="country-name">ארמניה</div>
+        </div>
+        <div class="country-card" onclick="video('austria')">
+            <img class="flag-img" src="assets/images/countries/europe/austria.webp" alt="austria Flag">
+            <div class="country-name">אוסטריה</div>
+        </div>
+        <div class="country-card" onclick="video('azerbaijan')">
+            <img class="flag-img" src="assets/images/countries/europe/azerbaijan.webp" alt="azerbaijan Flag">
+            <div class="country-name">אזרבייג'ן</div>
+        </div>
+        <div class="country-card" onclick="video('belarus')">
+            <img class="flag-img" src="assets/images/countries/europe/belarus.webp" alt="belarus Flag">
+            <div class="country-name">בלרוס</div>
+        </div>
+        <div class="country-card" onclick="video('belgium')">
+            <img class="flag-img" src="assets/images/countries/europe/belgium.webp" alt="belgium Flag">
+            <div class="country-name">בלגיה</div>
+        </div>
+        <div class="country-card" onclick="video('bosniaAndHerzegovina')">
+            <img class="flag-img" src="assets/images/countries/europe/bosniaAndHerzegovina.webp" alt="bosniaAndHerzegovina Flag">
+            <div class="country-name">בוסניה והרצגובינה</div>
+        </div>
+        <div class="country-card" onclick="video('bulgaria')">
+            <img class="flag-img" src="assets/images/countries/europe/bulgaria.webp" alt="bulgaria Flag">
+            <div class="country-name">בולגריה</div>
+        </div>
+        <div class="country-card" onclick="video('croatia')">
+            <img class="flag-img" src="assets/images/countries/europe/croatia.webp" alt="croatia Flag">
+            <div class="country-name">קרואטיה</div>
+        </div>
+        <div class="country-card" onclick="video('cyprus')">
+            <img class="flag-img" src="assets/images/countries/europe/cyprus.webp" alt="cyprus Flag">
+            <div class="country-name">קפריסין</div>
+        </div>
+        <div class="country-card" onclick="video('czechRepublic')">
+            <img class="flag-img" src="assets/images/countries/europe/czechRepublic.webp" alt="czechRepublic Flag">
+            <div class="country-name">צ'כיה</div>
+        </div>
+        <div class="country-card" onclick="video('denmark')">
+            <img class="flag-img" src="assets/images/countries/europe/denmark.webp" alt="denmark Flag">
+            <div class="country-name">דנמרק</div>
+        </div>
+        <div class="country-card" onclick="video('estonia')">
+            <img class="flag-img" src="assets/images/countries/europe/estonia.webp" alt="estonia Flag">
+            <div class="country-name">אסטוניה</div>
+        </div>
+        <div class="country-card" onclick="video('finland')">
+            <img class="flag-img" src="assets/images/countries/europe/finland.webp" alt="finland Flag">
+            <div class="country-name">פינלנד</div>
+        </div>
+        <div class="country-card" onclick="video('france')">
+            <img class="flag-img" src="assets/images/countries/europe/france.webp" alt="france Flag">
+            <div class="country-name">צרפת</div>
+        </div>
+        <div class="country-card" onclick="video('georgia')">
+            <img class="flag-img" src="assets/images/countries/europe/georgia.webp" alt="georgia Flag">
+            <div class="country-name">גאורגיה</div>
+        </div>
+        <div class="country-card" onclick="video('germany')">
+            <img class="flag-img" src="assets/images/countries/europe/germany.webp" alt="germany Flag">
+            <div class="country-name">גרמניה</div>
+        </div>
+        <div class="country-card" onclick="video('greece')">
+            <img class="flag-img" src="assets/images/countries/europe/greece.webp" alt="greece Flag">
+            <div class="country-name">יוון</div>
+        </div>
+        <div class="country-card" onclick="video('hungary')">
+            <img class="flag-img" src="assets/images/countries/europe/hungary.webp" alt="hungary Flag">
+            <div class="country-name">הונגריה</div>
+        </div>
+        <div class="country-card" onclick="video('iceland')">
+            <img class="flag-img" src="assets/images/countries/europe/iceland.webp" alt="iceland Flag">
+            <div class="country-name">איסלנד</div>
+        </div>
+        <div class="country-card" onclick="video('ireland')">
+            <img class="flag-img" src="assets/images/countries/europe/ireland.webp" alt="ireland Flag">
+            <div class="country-name">אירלנד</div>
+        </div>
+        <div class="country-card" onclick="video('italy')">
+            <img class="flag-img" src="assets/images/countries/europe/italy.webp" alt="italy Flag">
+            <div class="country-name">איטליה</div>
+        </div>
+        <div class="country-card" onclick="video('kosovo')">
+            <img class="flag-img" src="assets/images/countries/europe/kosovo.png" alt="kosovo Flag">
+            <div class="country-name">קוסובו</div>
+        </div>
+        <div class="country-card" onclick="video('latvia')">
+            <img class="flag-img" src="assets/images/countries/europe/latvia.webp" alt="latvia Flag">
+            <div class="country-name">לטביה</div>
+        </div>
+        <div class="country-card" onclick="video('liechtenstein')">
+            <img class="flag-img" src="assets/images/countries/europe/liechtenstein.webp" alt="liechtenstein Flag">
+            <div class="country-name">ליכטשטיין</div>
+        </div>
+        <div class="country-card" onclick="video('lithuania')">
+            <img class="flag-img" src="assets/images/countries/europe/lithuania.webp" alt="lithuania Flag">
+            <div class="country-name">ליטה</div>
+        </div>
+        <div class="country-card" onclick="video('luxembourg')">
+            <img class="flag-img" src="assets/images/countries/europe/luxembourg.webp" alt="luxembourg Flag">
+            <div class="country-name">לוקסמבורג</div>
+        </div>
+        <div class="country-card" onclick="video('malta')">
+            <img class="flag-img" src="assets/images/countries/europe/malta.webp" alt="malta Flag">
+            <div class="country-name">מלטה</div>
+        </div>
+        <div class="country-card" onclick="video('moldova')">
+            <img class="flag-img" src="assets/images/countries/europe/moldova.webp" alt="moldova Flag">
+            <div class="country-name">מולדובה</div>
+        </div>
+        <div class="country-card" onclick="video('monaco')">
+            <img class="flag-img" src="assets/images/countries/europe/monaco.webp" alt="monaco Flag">
+            <div class="country-name">מונקו</div>
+        </div>
+        <div class="country-card" onclick="video('montenegro')">
+            <img class="flag-img" src="assets/images/countries/europe/montenegro.webp" alt="montenegro Flag">
+            <div class="country-name">מונטנגרו</div>
+        </div>
+        <div class="country-card" onclick="video('netherlands')">
+            <img class="flag-img" src="assets/images/countries/europe/netherlands.webp" alt="netherlands Flag">
+            <div class="country-name">הולנד</div>
+        </div>
+        <div class="country-card" onclick="video('northMacedonia')">
+            <img class="flag-img" src="assets/images/countries/europe/northMacedonia.webp" alt="northMacedonia Flag">
+            <div class="country-name">צפון מקדוניה</div>
+        </div>
+        <div class="country-card" onclick="video('norway')">
+            <img class="flag-img" src="assets/images/countries/europe/norway.webp" alt="norway Flag">
+            <div class="country-name">נורווגיה</div>
+        </div>
+        <div class="country-card" onclick="video('poland')">
+            <img class="flag-img" src="assets/images/countries/europe/poland.webp" alt="poland Flag">
+            <div class="country-name">פולנד</div>
+        </div>
+        <div class="country-card" onclick="video('portugal')">
+            <img class="flag-img" src="assets/images/countries/europe/portugal.webp" alt="portugal Flag">
+            <div class="country-name">פורטוגל</div>
+        </div>
+        <div class="country-card" onclick="video('romania')">
+            <img class="flag-img" src="assets/images/countries/europe/romania.webp" alt="romania Flag">
+            <div class="country-name">רומניה</div>
+        </div>
+        <div class="country-card" onclick="video('russia')">
+            <img class="flag-img" src="assets/images/countries/europe/russia.webp" alt="russia Flag">
+            <div class="country-name">רוסיה</div>
+        </div>
+        <div class="country-card" onclick="video('sanMarino')">
+            <img class="flag-img" src="assets/images/countries/europe/sanMarino.webp" alt="sanMarino Flag">
+            <div class="country-name">סאן מרינו</div>
+        </div>
+        <div class="country-card" onclick="video('serbia')">
+            <img class="flag-img" src="assets/images/countries/europe/serbia.webp" alt="serbia Flag">
+            <div class="country-name">סרביה</div>
+        </div>
+        <div class="country-card" onclick="video('slovakia')">
+            <img class="flag-img" src="assets/images/countries/europe/slovakia.webp" alt="slovakia Flag">
+            <div class="country-name">סלובקיה</div>
+        </div>
+        <div class="country-card" onclick="video('slovenia')">
+            <img class="flag-img" src="assets/images/countries/europe/slovenia.webp" alt="slovenia Flag">
+            <div class="country-name">סלובניה</div>
+        </div>
+        <div class="country-card" onclick="video('spain')">
+            <img class="flag-img" src="assets/images/countries/europe/spain.webp" alt="spain Flag">
+            <div class="country-name">ספרד</div>
+        </div>
+        <div class="country-card" onclick="video('sweden')">
+            <img class="flag-img" src="assets/images/countries/europe/sweden.webp" alt="sweden Flag">
+            <div class="country-name">שוודיה</div>
+        </div>
+        <div class="country-card" onclick="video('switzerland')">
+            <img class="flag-img" src="assets/images/countries/europe/switzerland.webp" alt="switzerland Flag">
+            <div class="country-name">שוויץ</div>
+        </div>
+        <div class="country-card" onclick="video('turkey')">
+            <img class="flag-img" src="assets/images/countries/europe/turkey.webp" alt="turkey Flag">
+            <div class="country-name">טורקיה</div>
+        </div>
+        <div class="country-card" onclick="video('uk')">
+            <img class="flag-img" src="assets/images/countries/europe/UK.webp" alt="uk Flag">
+            <div class="country-name">בריטניה</div>
+        </div>
+        <div class="country-card" onclick="video('ukraine')">
+            <img class="flag-img" src="assets/images/countries/europe/ukraine.webp" alt="ukraine Flag">
+            <div class="country-name">אוקראינה</div>
+        </div>
+        <div class="country-card" onclick="video('vatican')">
+            <img class="flag-img" src="assets/images/countries/europe/vatican.webp" alt="vatican Flag">
+            <div class="country-name">ותיקן</div>
+        </div>
+    </div>
+    </div> 
+    <div id="australiaCountries" class="grid-container" style="display: none;">
+        <img id="arrowAustralia" src="assets/images/arrow.png" alt="Back Arrow">
+        
+        <div class="search-wrapper">
+            <input type="text" id="australiaSearch" placeholder="חפש מדינה..." oninput="filterCountries('australiaCountries', 'australiaSearch')">
+        </div>
+        
+        <div class="country-card" onclick="video('australia')">
+            <img class="flag-img" src="assets/images/countries/australia/australia.webp" alt="Australia Flag">
+            <div class="country-name">אוסטרליה</div>
+        </div>
+        <div class="country-card" onclick="video('fiji')">
+            <img class="flag-img" src="assets/images/countries/australia/fiji.webp" alt="fiji Flag">
+            <div class="country-name">פיג'י</div>
+        </div>
+        <div class="country-card" onclick="video('kiribati')">
+            <img class="flag-img" src="assets/images/countries/australia/kiribati.webp" alt="kiribati Flag">
+            <div class="country-name">קריבטי</div>
+        </div>
+        <div class="country-card" onclick="video('marshallIslands')">
+            <img class="flag-img" src="assets/images/countries/australia/marshallIslands.webp" alt="marshall Islands Flag">
+            <div class="country-name">איי מרשל</div>
+        </div>
+        <div class="country-card" onclick="video('micronesia')">
+            <img class="flag-img" src="assets/images/countries/australia/micronesia.png" alt="micronesia Flag">
+            <div class="country-name">מיקרונזיה</div>
+        </div>
+        <div class="country-card" onclick="video('nauru')">
+            <img class="flag-img" src="assets/images/countries/australia/nauru.png" alt="nauru Flag">
+            <div class="country-name">נאורו</div>
+        </div>
+        <div class="country-card" onclick="video('newZealand')">
+            <img class="flag-img" src="assets/images/countries/australia/newZealand.webp" alt="new Zealand Flag">
+            <div class="country-name">ניו זילנד</div>
+        </div>
+        <div class="country-card" onclick="video('palau')">
+            <img class="flag-img" src="assets/images/countries/australia/palau.webp" alt="palau Flag">
+            <div class="country-name">פלאו</div>
+        </div>
+        <div class="country-card" onclick="video('papauNewGuinea')">
+            <img class="flag-img" src="assets/images/countries/australia/papauNewGuinea.png" alt="papauNewGuinea Flag">
+            <div class="country-name">פפאו גינאה החדשה</div>
+        </div>
+        <div class="country-card" onclick="video('samoa')">
+            <img class="flag-img" src="assets/images/countries/australia/samoa.webp" alt="samoa Flag">
+            <div class="country-name">סמואה</div>
+        </div>
+        <div class="country-card" onclick="video('solomonIslands')">
+            <img class="flag-img" src="assets/images/countries/australia/solomonIslands.png" alt="solomonIslands Flag">
+            <div class="country-name">איי שלמה</div>
+        </div>
+        <div class="country-card" onclick="video('tonga')">
+            <img class="flag-img" src="assets/images/countries/australia/tonga.webp" alt="tonga Flag">
+            <div class="country-name">טונגה</div>
+        </div>
+        <div class="country-card" onclick="video('tuvalu')">
+            <img class="flag-img" src="assets/images/countries/australia/tuvalu.png" alt="tuvalu Flag">
+            <div class="country-name">טובלו</div>
+        </div>
+        <div class="country-card" onclick="video('vanuatu')">
+            <img class="flag-img" src="assets/images/countries/australia/vanuatu.webp" alt="vanuatu Flag">
+            <div class="country-name">וונואטו</div>
+        </div>
+    </div> 
+    <div id="asiaCountries" class="grid-container" style="display: none;">
+        <img id="arrowAsia" src="assets/images/arrow.png" alt="Back Arrow">
+        <div class="search-wrapper">
+            <input type="text" id="asiaSearch" placeholder="חפש מדינה..." oninput="filterCountries('asiaCountries', 'asiaSearch')">
+        </div>
+       <div class="country-card" onclick="video('afganistan')">
+            <img class="flag-img" src="assets/images/countries/asia/afganistan.webp" alt="afganistan Flag">
+            <div class="country-name">אפגניסטן</div>
+        </div>
+       <div class="country-card" onclick="video('armenia')">
+            <img class="flag-img" src="assets/images/countries/asia/armenia.webp" alt="armenia Flag">
+            <div class="country-name">ארמניה</div>
+        </div>
+       <div class="country-card" onclick="video('azerbaijan')">
+            <img class="flag-img" src="assets/images/countries/asia/azerbaijan.webp" alt="azerbaijan Flag">
+            <div class="country-name">אזרבייג'ן</div>
+        </div>
+       <div class="country-card" onclick="video('bahrain')">
+            <img class="flag-img" src="assets/images/countries/asia/bahrain.webp" alt="bahrain Flag">
+            <div class="country-name">בחריין</div>
+        </div>
+       <div class="country-card" onclick="video('bangladesh')">
+            <img class="flag-img" src="assets/images/countries/asia/bangladesh.webp" alt="bangladesh Flag">
+            <div class="country-name">בנגלדש</div>
+        </div>
+       <div class="country-card" onclick="video('bhutan')">
+            <img class="flag-img" src="assets/images/countries/asia/bhutan.webp" alt="bhutan Flag">
+            <div class="country-name">בהוטן</div>
+        </div>
+       <div class="country-card" onclick="video('brunei')">
+            <img class="flag-img" src="assets/images/countries/asia/brunei.webp" alt="brunei Flag">
+            <div class="country-name">ברוניי</div>
+        </div>
+       <div class="country-card" onclick="video('cambodia')">
+            <img class="flag-img" src="assets/images/countries/asia/cambodia.webp" alt="cambodia Flag">
+            <div class="country-name">קמבודיה</div>
+        </div>
+       <div class="country-card" onclick="video('china')">
+            <img class="flag-img" src="assets/images/countries/asia/china.webp" alt="china Flag">
+            <div class="country-name">סין</div>
+        </div>
+       <div class="country-card" onclick="video('cyprus')">
+            <img class="flag-img" src="assets/images/countries/asia/cyprus.webp" alt="cyprus Flag">
+            <div class="country-name">קפריסין</div>
+        </div>
+       <div class="country-card" onclick="video('georgia')">
+            <img class="flag-img" src="assets/images/countries/asia/georgia.webp" alt="georgia Flag">
+            <div class="country-name">גאורגיה</div>
+        </div>
+       <div class="country-card" onclick="video('india')">
+            <img class="flag-img" src="assets/images/countries/asia/india.webp" alt="india Flag">
+            <div class="country-name">הודו</div>
+        </div>
+       <div class="country-card" onclick="video('indonesia')">
+            <img class="flag-img" src="assets/images/countries/asia/indonesia.webp" alt="indonesia Flag">
+            <div class="country-name">אינדונזיה</div>
+        </div>
+       <div class="country-card" onclick="video('iran')">
+            <img class="flag-img" src="assets/images/countries/asia/iran.webp" alt="iran Flag">
+            <div class="country-name">איראן</div>
+        </div>
+       <div class="country-card" onclick="video('iraq')">
+            <img class="flag-img" src="assets/images/countries/asia/iraq.webp" alt="iraq Flag">
+            <div class="country-name">עיראק</div>
+        </div>
+       <div class="country-card" onclick="video('israel')">
+            <img class="flag-img" src="assets/images/countries/asia/israel.webp" alt="israel Flag">
+            <div class="country-name">ישראל</div>
+        </div>
+       <div class="country-card" onclick="video('japan')">
+            <img class="flag-img" src="assets/images/countries/asia/japan.webp" alt="japan Flag">
+            <div class="country-name">יפן</div>
+        </div>
+       <div class="country-card" onclick="video('jordan')">
+            <img class="flag-img" src="assets/images/countries/asia/jordan.webp" alt="jordan Flag">
+            <div class="country-name">ירדן</div>
+        </div>
+       <div class="country-card" onclick="video('kazakhstan')">
+            <img class="flag-img" src="assets/images/countries/asia/kazakhstan.webp" alt="kazakhstan Flag">
+            <div class="country-name">קזחסטן</div>
+        </div>
+       <div class="country-card" onclick="video('kuwait')">
+            <img class="flag-img" src="assets/images/countries/asia/kuwait.webp" alt="kuwait Flag">
+            <div class="country-name">קווייט</div>
+        </div>
+       <div class="country-card" onclick="video('kyrgyzstan')">
+            <img class="flag-img" src="assets/images/countries/asia/kyrgyzstan.webp" alt="kyrgyzstan Flag">
+            <div class="country-name">קירגיסטן</div>
+        </div>
+       <div class="country-card" onclick="video('laos')">
+            <img class="flag-img" src="assets/images/countries/asia/laos.webp" alt="laos Flag">
+            <div class="country-name">לאוס</div>
+        </div>
+       <div class="country-card" onclick="video('lebanon')">
+            <img class="flag-img" src="assets/images/countries/asia/lebanon.webp" alt="lebanon Flag">
+            <div class="country-name">לבנון</div>
+        </div>
+       <div class="country-card" onclick="video('malaysia')">
+            <img class="flag-img" src="assets/images/countries/asia/malaysia.webp" alt="malaysia Flag">
+            <div class="country-name">מלזיה</div>
+        </div>
+       <div class="country-card" onclick="video('mongolia')">
+            <img class="flag-img" src="assets/images/countries/asia/mongolia.webp" alt="mongolia Flag">
+            <div class="country-name">מונגוליה</div>
+        </div>
+       <div class="country-card" onclick="video('myanmar')">
+            <img class="flag-img" src="assets/images/countries/asia/myanmar.webp" alt="myanmar Flag">
+            <div class="country-name">מיינאמר</div>
+        </div>
+    <div class="country-card" onclick="video('nepal')">
+        <img class="flag-img nepal-flag" src="https://flagcdn.com/np.svg" alt="nepal Flag">
+        <div class="country-name">נפאל</div>
+    </div>
+       <div class="country-card" onclick="video('northKorea')">
+            <img class="flag-img" src="assets/images/countries/asia/northKorea.png" alt="northKorea Flag">
+            <div class="country-name">צפון קוריאה</div>
+        </div>
+       <div class="country-card" onclick="video('oman')">
+            <img class="flag-img" src="assets/images/countries/asia/oman.webp" alt="oman Flag">
+            <div class="country-name">אומן</div>
+        </div>
+       <div class="country-card" onclick="video('pakistan')">
+            <img class="flag-img" src="assets/images/countries/asia/pakistan.webp" alt="pakistan Flag">
+            <div class="country-name">פקיסטן</div>
+        </div>
+       <div class="country-card" onclick="video('phillipines')">
+            <img class="flag-img" src="assets/images/countries/asia/phillipines.webp" alt="phillipines Flag">
+            <div class="country-name">הפיליפינים</div>
+        </div>
+       <div class="country-card" onclick="video('qatar')">
+            <img class="flag-img" src="assets/images/countries/asia/qatar.webp" alt="qatar Flag">
+            <div class="country-name">קטאר</div>
+        </div>
+       <div class="country-card" onclick="video('russia')">
+            <img class="flag-img" src="assets/images/countries/asia/russia.webp" alt="russia Flag">
+            <div class="country-name">רוסיה</div>
+        </div>
+       <div class="country-card" onclick="video('saudiArabia')">
+            <img class="flag-img" src="assets/images/countries/asia/saudiArabia.webp" alt="saudiArabia Flag">
+            <div class="country-name">ערב הסעודית</div>
+        </div>
+       <div class="country-card" onclick="video('singapore')">
+            <img class="flag-img" src="assets/images/countries/asia/singapore.webp" alt="singapore Flag">
+            <div class="country-name">סינגפור</div>
+        </div>
+       <div class="country-card" onclick="video('southKorea')">
+            <img class="flag-img" src="assets/images/countries/asia/southKorea.webp" alt="southKorea Flag">
+            <div class="country-name">דרום קוריאה</div>
+        </div>
+       <div class="country-card" onclick="video('sriLanka')">
+            <img class="flag-img" src="assets/images/countries/asia/sriLanka.webp" alt="sriLanka Flag">
+            <div class="country-name">סרי לנקה</div>
+        </div>
+       <div class="country-card" onclick="video('syria')">
+            <img class="flag-img" src="assets/images/countries/asia/syria.webp" alt="syria Flag">
+            <div class="country-name">סוריה</div>
+        </div>
+       <div class="country-card" onclick="video('tajikistan')">
+            <img class="flag-img" src="assets/images/countries/asia/tajikistan.webp" alt="tajikistan Flag">
+            <div class="country-name">טג'יקיסטן</div>
+        </div>
+       <div class="country-card" onclick="video('thailand')">
+            <img class="flag-img" src="assets/images/countries/asia/thailand.webp" alt="thailand Flag">
+            <div class="country-name">תאילנד</div>
+        </div>
+       <div class="country-card" onclick="video('timorLeste')">
+            <img class="flag-img" src="assets/images/countries/asia/timorLeste.webp" alt="timorLeste Flag">
+            <div class="country-name">טימור-לסטה</div>
+        </div>
+       <div class="country-card" onclick="video('turkemenistan')">
+            <img class="flag-img" src="assets/images/countries/asia/turkemenistan.webp" alt="turkemenistan Flag">
+            <div class="country-name">טורקמניסטן</div>
+        </div>
+       <div class="country-card" onclick="video('turkey')">
+            <img class="flag-img" src="assets/images/countries/asia/turkey.webp" alt="turkey Flag">
+            <div class="country-name">טורקיה</div>
+        </div>
+       <div class="country-card" onclick="video('uae')">
+            <img class="flag-img" src="assets/images/countries/asia/uae.webp" alt="uae Flag">
+            <div class="country-name">איחוד האמירויות</div>
+        </div>
+       <div class="country-card" onclick="video('uzbekistan')">
+            <img class="flag-img" src="assets/images/countries/asia/uzbekistan.webp" alt="uzbekistan Flag">
+            <div class="country-name">אוזבקיסטן</div>
+        </div>
+       <div class="country-card" onclick="video('vietnam')">
+            <img class="flag-img" src="assets/images/countries/asia/vietnam.webp" alt="vietnam Flag">
+            <div class="country-name">וויאטנם</div>
+        </div>
+       <div class="country-card" onclick="video('yemen')">
+            <img class="flag-img" src="assets/images/countries/asia/yemen.webp" alt="yemen Flag">
+            <div class="country-name">תימן</div>
+        </div>
+    </div>
+    <div id="nAmericaCountries" class="grid-container" style="display:none;">
+        <img id="arrowNAmerica" src="assets/images/arrow.png" alt="Back Arrow">
+        <div class="search-wrapper">
+            <input type="text" id="nAmericaSearch" placeholder="חפש מדינה..." oninput="filterCountries('nAmericaCountries', 'nAmericaSearch')">
+        </div>
+       <div class="country-card" onclick="video('anguilla')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/anguilla.png" alt="anguilla Flag">
+            <div class="country-name">אנגוילה</div>
+        </div>
+       <div class="country-card" onclick="video('antiguaAndBarbuda')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/antiguaAndBarbuda.webp" alt="antiguaAndBarbuda">
+            <div class="country-name">אנטיגה וברבדוס</div>
+        </div>
+       <div class="country-card" onclick="video('aruba')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/aruba.png" alt="aruba Flag">
+            <div class="country-name">ארובה</div>
+        </div>
+       <div class="country-card" onclick="video('bahamas')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/bahamas.webp" alt="bahamas Flag">
+            <div class="country-name">בהמאס</div>
+        </div>
+       <div class="country-card" onclick="video('barbados')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/barbados.webp" alt="barbados Flag">
+            <div class="country-name">ברבדוס</div>
+        </div>
+       <div class="country-card" onclick="video('belize')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/belize.webp" alt="belize Flag">
+            <div class="country-name">בליז</div>
+        </div>
+       <div class="country-card" onclick="video('bermuda')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/bermuda.png" alt="bermuda Flag">
+            <div class="country-name">ברמודה</div>
+        </div>
+       <div class="country-card" onclick="video('britishVirginIslands')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/britishVirginIslands.png" alt="britishVirginIslands Flag">
+            <div class="country-name">איי הבתולה הבריטיים</div>
+        </div>
+       <div class="country-card" onclick="video('canada')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/canada.webp" alt="canada Flag">
+            <div class="country-name">קנדה</div>
+        </div>
+       <div class="country-card" onclick="video('caribbeanNetherlands')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/caribbeanNetherlands.png" alt="caribbeanNetherlands Flag">
+            <div class="country-name">האיים הקריביים ההולנדיים</div>
+        </div>
+       <div class="country-card" onclick="video('caymanIslands')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/caymanIslands.png" alt="caymanIslands Flag">
+            <div class="country-name">איי קיימן</div>
+        </div>
+       <div class="country-card" onclick="video('costaRica')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/costaRica.webp" alt="costaRica Flag">
+            <div class="country-name">קוסטה ריקה</div>
+        </div>
+       <div class="country-card" onclick="video('cuba')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/cuba.webp" alt="cuba Flag">
+            <div class="country-name">קובה</div>
+        </div>
+       <div class="country-card" onclick="video('curacao')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/curacao.png" alt="curacao Flag">
+            <div class="country-name">קוראסאו</div>
+        </div>
+       <div class="country-card" onclick="video('dominica')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/dominica.webp" alt="dominica Flag">
+            <div class="country-name">דומיניקה</div>
+       </div>
+       <div class="country-card" onclick="video('dominicanRepublic')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/dominicanRepublic.webp" alt="dominicanRepublic Flag">
+            <div class="country-name">הרפובליקה הדומיניקנית</div>
+        </div>
+       <div class="country-card" onclick="video('elSalvador')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/elSalvador.webp" alt="elSalvador Flag">
+            <div class="country-name">אל סלוודור</div>
+        </div>
+       <div class="country-card" onclick="video('greenland')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/greenland.png" alt="greenland Flag">
+            <div class="country-name">גרינלנד</div>
+        </div>
+       <div class="country-card" onclick="video('grenada')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/grenada.png" alt="grenada Flag">
+            <div class="country-name">גרנדה</div>
+        </div>
+       <div class="country-card" onclick="video('guadeloupe')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/guadeloupe.png" alt="guadeloupe Flag">
+            <div class="country-name">גוואדלופ</div>
+        </div>
+       <div class="country-card" onclick="video('guatemala')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/guatemala.webp" alt="guatemala Flag">
+            <div class="country-name">גוואטמלה</div>
+        </div>
+       <div class="country-card" onclick="video('haiti')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/haiti.webp" alt="haiti Flag">
+            <div class="country-name">האיטי</div>
+        </div>
+       <div class="country-card" onclick="video('honduras')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/honduras.webp" alt="honduras Flag">
+            <div class="country-name">הונדורס</div>
+        </div>
+       <div class="country-card" onclick="video('jamaica')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/jamaica.webp" alt="jamaica Flag">
+            <div class="country-name">ג'מייקה</div>
+        </div>
+       <div class="country-card" onclick="video('martinique')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/martinique.png" alt="martinique Flag">
+            <div class="country-name">מרטיניק</div>
+        </div>
+       <div class="country-card" onclick="video('mexico')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/mexico.webp" alt="mexico Flag">
+            <div class="country-name">מקסיקו</div>
+        </div>
+       <div class="country-card" onclick="video('montserrat')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/montserrat.png" alt="montserrat Flag">
+            <div class="country-name">מונטסראט</div>
+        </div>
+       <div class="country-card" onclick="video('nicaragua')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/nicaragua.webp" alt="nicaragua Flag">
+            <div class="country-name">ניקרגואה</div>
+        </div>
+       <div class="country-card" onclick="video('panama')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/panama.webp" alt="panama Flag">
+            <div class="country-name">פנמה</div>
+        </div>
+       <div class="country-card" onclick="video('puertoRico')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/puertoRico.png" alt="puertoRico Flag">
+            <div class="country-name">פורטו ריקו</div>
+        </div>
+       <div class="country-card" onclick="video('saintBarthelemy')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/saintBarthelemy.png" alt="saintBarthelemy Flag">
+            <div class="country-name">סנט ברתלמי</div>
+        </div>
+       <div class="country-card" onclick="video('saintKittsAndNevis')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/saintKittsAndNevis.webp" alt="saintKittsAndNevis Flag">
+            <div class="country-name">סנט קיטס ונוויס</div>
+        </div>
+       <div class="country-card" onclick="video('saintLucia')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/saintLucia.webp" alt="saintLucia Flag">
+            <div class="country-name">סנט לוסיה </div>
+        </div>
+       <div class="country-card" onclick="video('saintMartin')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/saintMartin.png" alt="saintMartin Flag">
+            <div class="country-name">סנט מרטין </div>
+        </div>
+       <div class="country-card" onclick="video('saintPierreAndMiquelon')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/saintPierreAndMiquelon.png" alt="saintPierreAndMiquelon Flag">
+            <div class="country-name">סנט פייר ומיקלון</div>
+        </div>
+       <div class="country-card" onclick="video('trinidadAndTobago')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/trinidadAndTobago.webp" alt="trinidadAndTobago Flag">
+            <div class="country-name">טרינידד וטובגו</div>
+        </div>
+       <div class="country-card" onclick="video('usa')">
+            <img class="flag-img" src="assets/images/countries/nAmerica/usa.png" alt="usa Flag">
+            <div class="country-name">ארצות הברית</div>
+        </div>
+    </div>
+    <div id="africaCountries" class="grid-container" style="display:none;">
+        <img id="arrowAfrica" src="assets/images/arrow.png" alt="Back Arrow">
+        <div class="search-wrapper">
+            <input type="text" id="africaSearch" placeholder="חפש מדינה..." oninput="filterCountries('africaCountries', 'africaSearch')">
+        </div>
+       <div class="country-card" onclick="video('algeria')">
+            <img class="flag-img" src="assets/images/countries/africa/algeria.webp" alt="algeria Flag">
+            <div class="country-name">אלג'יר</div>
+        </div>
+       <div class="country-card" onclick="video('angola')">
+            <img class="flag-img" src="assets/images/countries/africa/angola.webp" alt="angola Flag">
+            <div class="country-name">אנגולה</div>
+        </div>
+       <div class="country-card" onclick="video('benin')">
+            <img class="flag-img" src="assets/images/countries/africa/benin.webp" alt="benin Flag">
+            <div class="country-name">בנין</div>
+        </div>
+       <div class="country-card" onclick="video('botswana')">
+            <img class="flag-img" src="assets/images/countries/africa/botswana.webp" alt="botswana Flag">
+            <div class="country-name">בוטסוואנה</div>
+        </div>
+       <div class="country-card" onclick="video('burkinaFaso')">
+            <img class="flag-img" src="assets/images/countries/africa/burkinaFaso.webp" alt="burkinaFaso Flag">
+            <div class="country-name">בורקינה פאסו</div>
+        </div>
+       <div class="country-card" onclick="video('burundi')">
+            <img class="flag-img" src="assets/images/countries/africa/burundi.webp" alt="burundi Flag">
+            <div class="country-name">בורונדי</div>
+        </div>
+       <div class="country-card" onclick="video('caboVerde')">
+            <img class="flag-img" src="assets/images/countries/africa/caboVerde.webp" alt="caboVerde Flag">
+            <div class="country-name">קאבו וורדה</div>
+        </div>
+       <div class="country-card" onclick="video('cameroon')">
+            <img class="flag-img" src="assets/images/countries/africa/cameroon.webp" alt="cameroon Flag">
+            <div class="country-name">קמרון</div>
+        </div>
+       <div class="country-card" onclick="video('car')">
+            <img class="flag-img" src="assets/images/countries/africa/car.webp" alt="car Flag">
+            <div class="country-name">הרפובליקה המרכז-אפריקאית</div>
+        </div>
+       <div class="country-card" onclick="video('chad')">
+            <img class="flag-img" src="assets/images/countries/africa/chad.webp" alt="chad Flag">
+            <div class="country-name">צ'אד</div>
+        </div>
+       <div class="country-card" onclick="video('comoros')">
+            <img class="flag-img" src="assets/images/countries/africa/comoros.webp" alt="comoros Flag">
+            <div class="country-name">קומורוס</div>
+        </div>
+       <div class="country-card" onclick="video('congo')">
+            <img class="flag-img" src="assets/images/countries/africa/congo.webp" alt="congo Flag">
+            <div class="country-name">קונגו</div>
+        </div>
+       <div class="country-card" onclick="video('cotedIvoire')">
+            <img class="flag-img" src="assets/images/countries/africa/cotedIvoire.webp" alt="cotedIvoire Flag">
+            <div class="country-name">חוף השנהב</div>
+        </div>
+       <div class="country-card" onclick="video('djibouti')">
+            <img class="flag-img" src="assets/images/countries/africa/djibouti.webp" alt="djibouti Flag">
+            <div class="country-name">דג'יבוטי</div>
+        </div>
+       <div class="country-card" onclick="video('drc')">
+            <img class="flag-img" src="assets/images/countries/africa/drc.webp" alt="drc Flag">
+            <div class="country-name">הרפובליקה הדמוקרטית של קונגו</div>
+        </div>
+       <div class="country-card" onclick="video('egypt')">
+            <img class="flag-img" src="assets/images/countries/africa/egypt.webp" alt="egypt Flag">
+            <div class="country-name">מצרים</div>
+        </div>
+       <div class="country-card" onclick="video('equatorialGeinea')">
+            <img class="flag-img" src="assets/images/countries/africa/equatorialGeinea.webp" alt="equatorialGeinea Flag">
+            <div class="country-name">גינאה המשוונית</div>
+        </div>
+       <div class="country-card" onclick="video('eritrea')">
+            <img class="flag-img" src="assets/images/countries/africa/eritrea.webp" alt="eritrea Flag">
+            <div class="country-name">אריתראה</div>
+        </div>
+       <div class="country-card" onclick="video('eswatini')">
+            <img class="flag-img" src="assets/images/countries/africa/eswatini.webp" alt="eswatini Flag">
+            <div class="country-name">אסווטיני</div>
+        </div>
+       <div class="country-card" onclick="video('ethiopia')">
+            <img class="flag-img" src="assets/images/countries/africa/ethiopia.webp" alt="ethiopia Flag">
+            <div class="country-name">אתיופיה</div>
+        </div>
+       <div class="country-card" onclick="video('gabon')">
+            <img class="flag-img" src="assets/images/countries/africa/gabon.webp" alt="gabon Flag">
+            <div class="country-name">גבון</div>
+        </div>
+       <div class="country-card" onclick="video('gambia')">
+            <img class="flag-img" src="assets/images/countries/africa/gambia.webp" alt="gambia Flag">
+            <div class="country-name">גמביה</div>
+        </div>
+       <div class="country-card" onclick="video('ghana')">
+            <img class="flag-img" src="assets/images/countries/africa/ghana.webp" alt="ghana Flag">
+            <div class="country-name">גאנה</div>
+        </div>
+       <div class="country-card" onclick="video('guinea')">
+            <img class="flag-img" src="assets/images/countries/africa/guinea.webp" alt="guinea Flag">
+            <div class="country-name">גינאה</div>
+        </div>
+       <div class="country-card" onclick="video('guineaBissau')">
+            <img class="flag-img" src="assets/images/countries/africa/guineaBissau.webp" alt="guineaBissau Flag">
+            <div class="country-name">גינאה ביסאו</div>
+        </div>
+       <div class="country-card" onclick="video('kenya')">
+            <img class="flag-img" src="assets/images/countries/africa/kenya.webp" alt="kenya Flag">
+            <div class="country-name">קניה</div>
+        </div>
+       <div class="country-card" onclick="video('lesotho')">
+            <img class="flag-img" src="assets/images/countries/africa/leshotho.webp" alt="lesotho Flag">
+            <div class="country-name">לסות'ו</div>
+        </div>
+       <div class="country-card" onclick="video('liberia')">
+            <img class="flag-img" src="assets/images/countries/africa/liberia.webp" alt="liberia Flag">
+            <div class="country-name">ליבריה</div>
+        </div>
+       <div class="country-card" onclick="video('libya')">
+            <img class="flag-img" src="assets/images/countries/africa/libya.webp" alt="libya Flag">
+            <div class="country-name">ליבייה</div>
+        </div>
+       <div class="country-card" onclick="video('madagascar')">
+            <img class="flag-img" src="assets/images/countries/africa/madagascar.webp" alt="madagascar Flag">
+            <div class="country-name">מדגסקר</div>
+        </div>
+       <div class="country-card" onclick="video('malawi')">
+            <img class="flag-img" src="assets/images/countries/africa/malawi.webp" alt="malawi Flag">
+            <div class="country-name">מלאווי</div>
+        </div>
+       <div class="country-card" onclick="video('mali')">
+            <img class="flag-img" src="assets/images/countries/africa/mali.webp" alt="mali Flag">
+            <div class="country-name">מאלי</div>
+        </div>
+       <div class="country-card" onclick="video('mauritania')">
+            <img class="flag-img" src="assets/images/countries/africa/mauritania.webp" alt="mauritania Flag">
+            <div class="country-name">מרואיטניה</div>
+        </div>
+       <div class="country-card" onclick="video('morocco')">
+            <img class="flag-img" src="assets/images/countries/africa/morocco.webp" alt="morocco Flag">
+            <div class="country-name">מרוקו</div>
+        </div>
+       <div class="country-card" onclick="video('mozambique')">
+            <img class="flag-img" src="assets/images/countries/africa/mozambique.webp" alt="mozambique Flag">
+            <div class="country-name">מוזמביק</div>
+        </div>
+       <div class="country-card" onclick="video('namibia')">
+            <img class="flag-img" src="assets/images/countries/africa/namibia.webp" alt="namibia Flag">
+            <div class="country-name">נמיביה</div>
+        </div>
+       <div class="country-card" onclick="video('niger')">
+            <img class="flag-img" src="assets/images/countries/africa/niger.webp" alt="niger Flag">
+            <div class="country-name">נייג'ר</div>
+        </div>
+       <div class="country-card" onclick="video('nigeria')">
+            <img class="flag-img" src="assets/images/countries/africa/nigeria.webp" alt="nigeria Flag">
+            <div class="country-name">ניגריה</div>
+        </div>
+       <div class="country-card" onclick="video('rwanda')">
+            <img class="flag-img" src="assets/images/countries/africa/rwanda.webp" alt="rwanda Flag">
+            <div class="country-name">רווואנדה</div>
+        </div>
+       <div class="country-card" onclick="video('saoTomeAndPrincipe')">
+            <img class="flag-img" src="assets/images/countries/africa/saoTomeAndPrincipe.webp" alt="saoTomeAndPrincipe Flag">
+            <div class="country-name">סאו טומה ופרינסיפה</div>
+        </div>
+       <div class="country-card" onclick="video('senegal')">
+            <img class="flag-img" src="assets/images/countries/africa/senegal.webp" alt="senegal Flag">
+            <div class="country-name">סנגל</div>
+        </div>
+       <div class="country-card" onclick="video('seychelles')">
+            <img class="flag-img" src="assets/images/countries/africa/seychelles.webp" alt="seychelles Flag">
+            <div class="country-name">איי סיישל</div>
+        </div>
+       <div class="country-card" onclick="video('sierraLeone')">
+            <img class="flag-img" src="assets/images/countries/africa/sierraLeone.webp" alt="sierraLeone Flag">
+            <div class="country-name">סיירה לאון</div>
+        </div>
+       <div class="country-card" onclick="video('somalia')">
+            <img class="flag-img" src="assets/images/countries/africa/somalia.webp" alt="somalia Flag">
+            <div class="country-name">סומליה</div>
+        </div>
+       <div class="country-card" onclick="video('southAfrica')">
+            <img class="flag-img" src="assets/images/countries/africa/southAfrica.webp" alt="southAfrica Flag">
+            <div class="country-name">דרום אפריקה</div>
+        </div>
+       <div class="country-card" onclick="video('southSudan')">
+            <img class="flag-img" src="assets/images/countries/africa/southSudan.webp" alt="southSudan Flag">
+            <div class="country-name">דרום סודן</div>
+        </div>
+       <div class="country-card" onclick="video('sudan')">
+            <img class="flag-img" src="assets/images/countries/africa/sudan.webp" alt="sudan Flag">
+            <div class="country-name">סודן</div>
+        </div>
+       <div class="country-card" onclick="video('tanzania')">
+            <img class="flag-img" src="assets/images/countries/africa/tanzania.webp" alt="tanzania Flag">
+            <div class="country-name">טנזניה</div>
+        </div>
+       <div class="country-card" onclick="video('togo')">
+            <img class="flag-img" src="assets/images/countries/africa/togo.webp" alt="togo Flag">
+            <div class="country-name">טוגו</div>
+        </div>
+       <div class="country-card" onclick="video('uganda')">
+            <img class="flag-img" src="assets/images/countries/africa/uganda.webp" alt="uganda Flag">
+            <div class="country-name">אוגנדה</div>
+        </div>
+       <div class="country-card" onclick="video('zambia')">
+            <img class="flag-img" src="assets/images/countries/africa/zambia.webp" alt="zambia Flag">
+            <div class="country-name">זמביה</div>
+        </div>
+       <div class="country-card" onclick="video('zimbabwe')">
+            <img class="flag-img" src="assets/images/countries/africa/zimbabwe.webp" alt="zimbabwe Flag">
+            <div class="country-name">זימבבואה</div>
+        </div>
+    </div>
+    <div id="sAmericaCountries" class="grid-container" style="display:none;">
+        <img id="arrowSAmerica" src="assets/images/arrow.png" alt="Back Arrow">
+        <div class="search-wrapper">
+            <input type="text" id="sAmericaSearch" placeholder="חפש מדינה..." oninput="filterCountries('sAmericaCountries', 'nAmericaSearch')">
+        </div>
+       <div class="country-card" onclick="video('argentina')">
+            <img class="flag-img" src="assets/images/countries/sAmerica/argentina.webp" alt="argentina Flag">
+            <div class="country-name">ארגנטינה</div>
+        </div>
+       <div class="country-card" onclick="video('bolivia')">
+            <img class="flag-img" src="assets/images/countries/sAmerica/bolivia.webp" alt="bolivia Flag">
+            <div class="country-name">בוליביה</div>
+        </div>
+       <div class="country-card" onclick="video('brazil')">
+            <img class="flag-img" src="assets/images/countries/sAmerica/brazil.webp" alt="brazil Flag">
+            <div class="country-name">ברזיל</div>
+        </div>
+       <div class="country-card" onclick="video('chile')">
+            <img class="flag-img" src="assets/images/countries/sAmerica/chile.webp" alt="chile Flag">
+            <div class="country-name">צ'ילה</div>
+        </div>
+       <div class="country-card" onclick="video('colombia')">
+            <img class="flag-img" src="assets/images/countries/sAmerica/colombia.webp" alt="colombia Flag">
+            <div class="country-name">קולומביה</div>
+        </div>
+       <div class="country-card" onclick="video('ecuador')">
+            <img class="flag-img" src="assets/images/countries/sAmerica/ecuador.webp" alt="ecuador Flag">
+            <div class="country-name">אקוודור</div>
+        </div>
+       <div class="country-card" onclick="video('falklandIsland')">
+            <img class="flag-img" src="assets/images/countries/sAmerica/falklandIsland.webp" alt="falklandIsland Flag">
+            <div class="country-name">איי פוקלנד</div>
+        </div>
+      <div class="country-card" onclick="video('guyana')">
+            <img class="flag-img" src="assets/images/countries/sAmerica/guyana.webp" alt="guyana Flag">
+            <div class="country-name">גיאנה</div>
+        </div>
+      <div class="country-card" onclick="video('paraguay')">
+            <img class="flag-img" src="assets/images/countries/sAmerica/paraguay.webp" alt="paraguay Flag">
+            <div class="country-name">פרגוואי</div>
+        </div>
+      <div class="country-card" onclick="video('peru')">
+            <img class="flag-img" src="assets/images/countries/sAmerica/peru.webp" alt="peru Flag">
+            <div class="country-name">פרו</div>
+        </div>
+      <div class="country-card" onclick="video('southGeorgianIslands')">
+            <img class="flag-img" src="assets/images/countries/sAmerica/southGeorgianIslands.webp" alt="southGeorgianIslands Flag">
+            <div class="country-name">איי ג'ורג'יה הדרומית ואיי הסנדוויץ' הדרומיים</div>
+        </div>
+      <div class="country-card" onclick="video('suriname')">
+            <img class="flag-img" src="assets/images/countries/sAmerica/suriname.webp" alt="suriname Flag">
+            <div class="country-name">סורינאם</div>
+        </div>
+      <div class="country-card" onclick="video('uruguay')">
+            <img class="flag-img" src="assets/images/countries/sAmerica/uruguay.webp" alt="uruguay Flag">
+            <div class="country-name">אורוגוואי</div>
+        </div>
+      <div class="country-card" onclick="video('venezuela')">
+            <img class="flag-img" src="assets/images/countries/sAmerica/venezuela.webp" alt="venezuela Flag">
+            <div class="country-name">וונצואלה</div>
+        </div>
+    </div>
+    <div id="funFactPanel" style="display: none;">
+        <span class="close-fact-btn" onclick="closeFactPanel()">&times;</span>
+        <div id="factContent"></div>
+        <button id="watchVideoBtn">צפה בסרטון 🎥</button>
+    </div>
+
+</body>
+</html>

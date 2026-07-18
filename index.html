@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>בחר לומדה</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/images/thinking.png?v=2">
+    <script src="code.js" defer></script>
+</head>
+<body>
+    <div class="bg-glow-1"></div>
+    <div class="bg-glow-2"></div>
+
+    <div class="selection-container">
+        <h1>לאן נרצה ללכת היום?</h1>
+        
+        <div class="choices">
+            
+            <a href="birthday.html" class="choice-item">
+                <svg viewBox="0 0 300 100" class="curved-text">
+                    <path id="curve-birthday" d="M 40,85 A 110,110 0 0,1 260,85" fill="transparent" />
+                    <text>
+                        <textPath href="#curve-birthday" startOffset="50%" text-anchor="middle">
+                            יום הולדת שמח!
+                        </textPath>
+                    </text>
+                </svg>
+                <div class="logo-wrapper">
+                    <img src="assets/images/emoji.png" alt="Birthday Logo" class="logo-img">
+                </div>
+            </a>
+            <a href="world.html" class="choice-item">
+                <svg viewBox="0 0 300 100" class="curved-text">
+                    <path id="curve-world" d="M 40,85 A 110,110 0 0,1 260,85" fill="transparent" />
+                    <text>
+                        <textPath href="#curve-world" startOffset="50%" text-anchor="middle">
+                            לומדת מדינות!
+                        </textPath>
+                    </text>
+                </svg>
+                <div class="logo-wrapper">
+                    <img src="assets/images/worldLogo.png" alt="World Logo" class="logo-img">
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
