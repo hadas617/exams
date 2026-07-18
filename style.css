@@ -167,7 +167,7 @@ h1 {
     gap: 10vw;
 }
 
-@media (max-width: 1408px) and (max-height: 702px) {
+@media (min-width: 1300px) and (min-height: 650px) {
 
     .selection-container {
         width: 100%;
