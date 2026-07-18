@@ -809,4 +809,7 @@ h4 {
       top: 80% !important;
       transform: translate(-50%, -50%) perspective(2000px) rotate(5deg) scale(1.2);
   }
+  body {
+    background-color: #C0392B;
+  }
 }
