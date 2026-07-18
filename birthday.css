@@ -627,6 +627,9 @@ h4 {
 }
 
 @media (max-width: 1408px) and (max-height: 702px) {
+  body  {
+    background-color: red;
+  }
   .card {
     width: 25vw;
     height: 60vh;
