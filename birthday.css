@@ -805,6 +805,6 @@ h4 {
   .card.card.open {
       left: 75%;
       top: 90% !important;
-      transform: perspective(2000px) rotate(5deg) scale(1.2);
+      transform: translate(-50%, -20%) perspective(2000px) rotate(5deg) scale(1.2);
   }
 }
