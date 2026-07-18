@@ -606,7 +606,7 @@ h4 {
 .card .details p {
   font-family: 'Rubik', sans-serif;
   font-size: 2.2vh;
-  line-height: 1.03; 
+  line-height: 1.03;   /* or 25px */
   transform: rotate(1deg);
   padding: 0 20px 0 0;
   margin-bottom: 15px;
@@ -666,16 +666,18 @@ h4 {
     font-size: 3.5vh;
   }
 
+  /* Fixed the CSS syntax error by moving this out of .card .details h4 */
   .card:hover {
     left: 50%;
-    top: 45%; 
-    transform: translate(-50%, -50%) perspective(2000px) rotate(5deg) scale(1.3);
-    box-shadow: inset 20px 0 50px rgba(0,0,0,.5),
-                0 10px 100px rgba(0,0,0,.5);
+    top: 35%; /* Changed from 1% to 35% so it doesn't vanish entirely on hover */
+    transform: translate(-50%, -50%) perspective(2000px);
+    box-shadow: inset 300px 0 50px rgba(0,0,0,.5), 20px 0 60px rgba(0,0,0,.5);
   }
+
+  /* CHANGED: Brought the card significantly up so the bottom stays inside the frame */
   .card.open {
     left: 75%;
-    top: 45%;  
+    top: 30%; /* Altered from -3vh to 30% to position its center higher up securely */
     transform: translate(-50%, -50%) perspective(2000px) rotate(5deg) scale(1.2); /* Slipped scale down a tiny bit to make sure it fits vertical space */
   }
 
@@ -693,9 +695,8 @@ h4 {
   }
 
   .card.open .bark {
-    opacity:1;
-    transition:.6s;
-    box-shadow:300px 200px 100px rgba(0,0,0,.4) inset;
+    opacity: 1;
+    box-shadow: 300px 200px 100px rgba(0,0,0,.4) inset;
   }
 
   #exit {

@@ -79,6 +79,7 @@ h1 {
     font-weight: 800;
     letter-spacing: 0.1vh;
     background: linear-gradient(135deg, #ffffff 30%, #a5a5db 100%);
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 0 4px 20px rgba(0,0,0,0.5);
 }
@@ -166,7 +167,7 @@ h1 {
     gap: 10vw;
 }
 
-@media (min-width: 1300px) and (min-height: 650px) {
+@media (max-width: 1408px) and (max-height: 702px) {
 
     .selection-container {
         width: 100%;
@@ -189,6 +190,7 @@ h1 {
         letter-spacing: 0.1vh;
         text-align: center;
         background: linear-gradient(135deg, #ffffff 30%, #a5a5db 100%);
+        -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         text-shadow: 0 4px 20px rgba(0,0,0,0.5);
     }
