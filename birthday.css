@@ -665,7 +665,7 @@ h4 {
   }
   .card.open {
     left: 75%;
-    top: 35%;  
+    top: 25%;  
     transform: translate(-50%, -50%) perspective(2000px) rotate(5deg) scale(1.2); /* Slipped scale down a tiny bit to make sure it fits vertical space */
   }
   .card.open .bark {
