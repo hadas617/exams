@@ -663,11 +663,7 @@ h4 {
   .card .details h4 {
     font-size: 3.5vh;
   }
-  .card.open {
-      left: 75%;
-      top: 95%;  
-      transform: translate(-50%, -50%) perspective(2000px) rotate(5deg) scale(1.2);
-  }
+
   .card.open .bark {
       box-shadow:80px 80px 60px rgba(0,0,0,.25) inset;
   }
@@ -805,5 +801,10 @@ h4 {
 
   #exitHover {
     width: 5vw;
+  }
+  .card.card.open {
+      left: 75%;
+      top: 75%;
+      transform: translate(-50%, -50%) perspective(2000px) rotate(5deg) scale(1.2);
   }
 }
