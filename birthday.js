@@ -183,19 +183,18 @@ document.addEventListener("click", function (event) {
 const manager = new ConfettiManager();
 
 window.addEventListener("load", () => {
-  // const confettiInterval = setInterval(() => {
-  //   manager.addConfetti({
-  //     confettiesNumber: 50
-  //   });
-  // }, 250);
-  // setTimeout(() => {
-  //   clearInterval(confettiInterval);
-  //   manager.confetti = [];
-  //   manager.canvas.remove();
-  //   makingbd();
-  // }, 3000);
+  const confettiInterval = setInterval(() => {
+    manager.addConfetti({
+      confettiesNumber: 50
+    });
+  }, 250);
+  setTimeout(() => {
+    clearInterval(confettiInterval);
+    manager.confetti = [];
+    manager.canvas.remove();
+    makingbd();
+  }, 3000);
   });
-  card();
 })();
 
 function makingbd() {
