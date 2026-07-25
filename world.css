@@ -824,4 +824,15 @@ body {
   #noteText {
     margin-top: 20px;
   }
+  
+  #videoBg {
+    position: absolute;
+    height: 110%;
+    width: 100%;
+    top: 10vh;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+  }
+
 }
