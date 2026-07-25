@@ -720,8 +720,8 @@ body {
     position: fixed;
     z-index: 2;
     left: 0;
-    top: 10vh;
-    height: 90vh;
+    top: 0vh;
+    height: 1100vh;
     width: 50vw;
     pointer-events: none;
   }
