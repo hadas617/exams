@@ -720,7 +720,7 @@ body {
     position: fixed;
     z-index: 2;
     left: 0;
-    top: 0vh;
+    top: 2vh;
     height: 100vh;
     width: 50vw;
     pointer-events: none;
@@ -786,7 +786,7 @@ body {
   #videoPlayer {
     position: absolute;
     z-index: 4;
-    top: 16vh;
+    top: 18vh;
     left: 23vw;
     width: 54vw;
     height: 55vh;
@@ -798,7 +798,7 @@ body {
     height: 18vh;
     width: 16vw;
     left: 4vw;
-    top: 10vh;
+    top: 12vh;
     transform: rotate(-18deg);
     object-fit: cover;
     border-radius: 4px;
@@ -806,7 +806,7 @@ body {
   }
   #funFactPanel {
     position: fixed;
-    top: 19vh;
+    top: 23vh;
     left: 2vw;
     width: 220px;
     background: rgba(0, 44, 79, 0.9);
