@@ -587,6 +587,7 @@ function europe() {
 }
 
 function australia() {
+  document.body.style.backgroundColor = 'rgb(119, 223, 254)';
   document.body.style.overflow='auto';
   currentContinent = 'australia';
   if(document.getElementById("australiaCountries")) resetSearch("australiaCountries", "australiaSearch");
@@ -597,6 +598,7 @@ function australia() {
 }
 
 function asia() {
+  document.body.style.backgroundColor = 'rgb(119, 223, 254)';
   document.body.style.overflow='auto';
   currentContinent = 'asia';
   if(document.getElementById("asiaCountries")) resetSearch("asiaCountries", "asiaSearch");
@@ -607,6 +609,7 @@ function asia() {
 }
 
 function nAmerica() {
+  document.body.style.backgroundColor = 'rgb(119, 223, 254)';
   document.body.style.overflow='auto';
   currentContinent = 'nAmerica';
   if(document.getElementById("nAmericaCountries")) resetSearch("nAmericaCountries", "nAmericaSearch");
@@ -617,6 +620,7 @@ function nAmerica() {
 }
 
 function sAmerica() {
+  document.body.style.backgroundColor = 'rgb(119, 223, 254)';
   document.body.style.overflow='auto';
   currentContinent = 'sAmerica';
   if(document.getElementById("sAmericaCountries")) resetSearch("sAmericaCountries", "sAmericaSearch");
@@ -627,6 +631,7 @@ function sAmerica() {
 }
 
 function africa() {
+  document.body.style.backgroundColor = 'rgb(119, 223, 254)';
   document.body.style.overflow='auto';
   currentContinent = 'africa';
   if(document.getElementById("africaCountries")) resetSearch("africaCountries", "africaSearch");
