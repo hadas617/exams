@@ -720,7 +720,7 @@ body {
     position: fixed;
     z-index: 2;
     left: 0;
-    top: -2vh;
+    top: -3vh;
     height: 100vh;
     width: 50vw;
     pointer-events: none;
@@ -786,7 +786,7 @@ body {
   #videoPlayer {
     position: absolute;
     z-index: 4;
-    top: 22vh;
+    top: 22.5vh;
     left: 23vw;
     width: 55vw;
     height: 51vh;
@@ -821,7 +821,7 @@ body {
     text-align: right;
     animation: slideInLeft 0.4s ease-out;
   }
-  #factContent{
-    top: 5vh;
+  #noteText {
+    margin-top: 20px;
   }
 }
