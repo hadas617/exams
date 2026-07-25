@@ -827,9 +827,9 @@ body {
   
   #videoBg {
     position: absolute;
-    height: 110%;
+    height: 113%;
     width: 100%;
-    top: -10vh;
+    top: -13vh;
     left: 0;
     z-index: -1;
   }
