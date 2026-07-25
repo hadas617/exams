@@ -786,7 +786,7 @@ body {
   #videoPlayer {
     position: absolute;
     z-index: 4;
-    top: 22.5vh;
+    top: 19.5vh;
     left: 23vw;
     width: 55vw;
     height: 51vh;
@@ -798,7 +798,7 @@ body {
     height: 18vh;
     width: 16vw;
     left: 4vw;
-    top: 13vh;
+    top: 9vh;
     transform: rotate(-19.5deg);
     object-fit: cover;
     border-radius: 4px;
@@ -822,7 +822,7 @@ body {
     animation: slideInLeft 0.4s ease-out;
   }
   #noteText {
-    margin-top: 60px;
+    margin-top: 0px;
   }
   
   #videoBg {
@@ -831,7 +831,6 @@ body {
     width: 100%;
     top: -10vh;
     left: 0;
-    /* object-fit: cover; */
     z-index: -1;
   }
 
