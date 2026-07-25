@@ -458,7 +458,7 @@ let autoScrollInterval = null;
 let currentContinent = 'europe';
 
 window.addEventListener("load", () => {
-  sea();
+  map();
 });
 
 function showFunFact(countryName) {
