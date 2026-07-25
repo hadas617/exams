@@ -720,7 +720,7 @@ body {
     position: fixed;
     z-index: 2;
     left: 0;
-    top: 2vh;
+    top: -2vh;
     height: 100vh;
     width: 50vw;
     pointer-events: none;
@@ -789,7 +789,7 @@ body {
     top: 18vh;
     left: 23vw;
     width: 54vw;
-    height: 55vh;
+    height: 51vh;
     border: none;
     background-color: #000;
   }
@@ -806,7 +806,7 @@ body {
   }
   #funFactPanel {
     position: fixed;
-    top: 23vh;
+    top: 19vh;
     left: 2vw;
     width: 220px;
     background: rgba(0, 44, 79, 0.9);
