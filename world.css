@@ -822,7 +822,7 @@ body {
     animation: slideInLeft 0.4s ease-out;
   }
   #noteText {
-    margin-top: 20px;
+    margin-top: 60px;
   }
   
   #videoBg {
@@ -831,7 +831,7 @@ body {
     width: 100%;
     top: -10vh;
     left: 0;
-    object-fit: cover;
+    /* object-fit: cover; */
     z-index: -1;
   }
 
