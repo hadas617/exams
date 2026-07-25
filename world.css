@@ -761,4 +761,22 @@ body {
     cursor: pointer;
     transition: transform 0.25s ease;
   }
+  .grid-container,
+  #europeCountries {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+  }
+
+  .country-card {
+    width: 100%;
+    max-width: none;
+  }
+
+  .flag-img {
+    height: 130px;
+  }
 }
