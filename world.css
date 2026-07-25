@@ -727,8 +727,8 @@ body {
   }
 
   .rocking-boat {
-    width: 80vw;
-    height: 50vh;
+    width: 100%;
+    height: auto;
     transform-origin: bottom center;
     animation: boatRock 4s ease-in-out infinite;
   }
