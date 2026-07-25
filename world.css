@@ -783,4 +783,43 @@ body {
     font-size: 22px;
     margin-top: 14px;
   }
+  #videoPlayer {
+    position: absolute;
+    z-index: 4;
+    top: 16vh;
+    left: 23vw;
+    width: 54vw;
+    height: 60vh;
+    border: none;
+    background-color: #000;
+  }
+  #flag {
+    position: absolute;
+    height: 18vh;
+    width: 16vw;
+    left: 4vw;
+    top: 8vh;
+    transform: rotate(-18deg);
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+  #funFactPanel {
+    position: fixed;
+    top: 17vh;
+    left: 2vw;
+    width: 260px;
+    background: rgba(0, 44, 79, 0.9);
+    backdrop-filter: blur(8px);
+    border: 3px solid #ffffff;
+    border-radius: 16px;
+    padding: 25px 20px;
+    color: #ffffff;
+    z-index: 1000;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    direction: rtl;
+    text-align: right;
+    animation: slideInLeft 0.4s ease-out;
+  }
+
 }
